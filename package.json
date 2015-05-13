@@ -15,16 +15,25 @@
     "type": "git",
     "url": "https://github.com/yieme/proxy-cache-middleware"
   },
-  "keywords": ["proxy","cache","middleware","express"],
+  "keywords": [
+    "proxy",
+    "cache",
+    "middleware",
+    "express"
+  ],
   "author": "Yieme",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yieme/proxy-cache-middleware/issues"
   },
-  "dependencies": {   },
+  "dependencies": {
+    "MD5": "^1.2.1"
+  },
   "devDependencies": {
+    "chai": "~1.10.0",
+    "express": "^4.12.3",
     "object-attributes": "~0.1.1",
-    "chai": "~1.10.0"
+    "request": "^2.55.0"
   },
   "globalDependencies": {
     "jshint": "^2.7.0",
