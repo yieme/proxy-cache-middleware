@@ -1,7 +1,7 @@
 {
   "name": "proxy-cache-middleware",
-  "version": "0.1.0",
-  "description": "Proxy cache middleware for Express",
+  "version": "0.2.0",
+  "description": "Proxy Cache Middleware for Express",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -27,13 +27,13 @@
     "url": "https://github.com/yieme/proxy-cache-middleware/issues"
   },
   "dependencies": {
-    "MD5": "^1.2.1"
+    "lodash": "^3.8.0",
+    "proxy-cache-file": "^0.4.1"
   },
   "devDependencies": {
     "chai": "~1.10.0",
     "express": "^4.12.3",
-    "object-attributes": "~0.1.1",
-    "request": "^2.55.0"
+    "object-attributes": "~0.1.1"
   },
   "globalDependencies": {
     "jshint": "^2.7.0",

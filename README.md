@@ -1,6 +1,6 @@
 # proxy-cache-middleware
 
-Proxy cache middleware for Express
+Proxy Cache Middleware for Express
 
 <!-- [![build status](https://secure.travis-ci.org/yieme/proxy-cache-middleware.png)](http://travis-ci.org/yieme/proxy-cache-middleware) -->
 

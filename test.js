@@ -1,25 +1,24 @@
 'use strict';
-var fs             = require('fs')
-var express        = require('express')
-var app            = express()
-var port           = process.env.PORT  || 3000
-var proxyMiddleware = require('./index')({
-	target:   process.env.TARGET         || "https://cdnjs.cloudflare.com/ajax/libs",
-	control:  process.env.CACHE_CONTROL  || 0, // 30672000 // 0 = disable cache-control header
-	duration: process.env.CACHE_DURATION || 1, // 30672000 // 0 = disable file caching
-	dir:      process.env.CACHE_DIR      || './tmp'
-})
+var express         = require('express')
+var app             = express()
+var port            = process.env.PORT || 3000
+var proxyMiddleware = require('./')
 
 function logMiddleware(req, res, next) {
 	console.log(req.url)
 	next()
 }
 
+app.use(logMiddleware)
 
-//app.use(logMiddleware)
+
 app.get('/', function(req, res) {
-  res.send('hello world')
+	var urls     = '/1140/2.0/1140.min.css'
+	var template = '<body style="font-family:arial;padding-top:50px"><center>Example: <a href="$url">$url</a>'
+	var page     = template.replace('$url', urls).replace('$url', urls)
+  res.send(page)
 })
+
 app.use(proxyMiddleware)
 
 
